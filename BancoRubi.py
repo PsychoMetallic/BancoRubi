@@ -7,11 +7,39 @@ import string
 from datetime import datetime
 import time
 
-def anim(texto):
+azul = "\033[34m"
+branco = "\033[37m"
+verde = "\033[32m"
+amarelo = "\033[33m"
+roxo = "\033[35m"
+vermelho = "\033[31m"
+verde1 = "\033[92m"
+
+
+def input(*args, **kwargs):
+    texto = " ".join(map(str, args))
+
     for letra in texto:
-        print(letra, end="", flush=True)
+        __builtins__.print(letra, end="", flush=True)
         time.sleep(0.05)
-    print()
+    
+    return __builtins__.input()
+
+def anim(*args, **kwargs):
+
+    texto = " ".join(map(str, args))
+
+    if texto.startswith("-") or texto.startswith(f"-"):
+        __builtins__.print(texto, **kwargs)
+        return
+
+    end = kwargs.get("end", "\n")
+
+    for letra in texto:
+        __builtins__.print(letra, end="", flush=True)
+        time.sleep(0.03)
+
+    __builtins__.print(end=end)
 
 ARQUIVO = "banco.json"
 MAX_TENTATIVAS = 3
