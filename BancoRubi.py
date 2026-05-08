@@ -94,7 +94,7 @@ def criar_conta():
     }
     
     salvar(dados)
-    print("Conta criada com sucesso!")
+    print(f"{amarelo}Conta criada com sucesso!{branco}")
 
 # =========================
 # LOGIN
@@ -123,15 +123,16 @@ def login():
         else:
             tentativas += 1
             anim(f"Senha incorreta! Restam {MAX_TENTATIVAS - tentativas}")
+            print()
     
-    anim("Conta bloqueada!")
+    anim(f"{vermelho}Conta bloqueada!{branco}")
 
 # =========================
 # MENU DO USUÁRIO
 # =========================
 def menu_usuario(usuario):
     while True:
-        print(f"\n=== Bem-vindo, ao Banco-Rubi {usuario} ===")
+        print(f"\n=== Bem-vindo, ao {vermelho}Banco-Rubi{branco} {usuario.capitalize()} ===")
         anim("1 - Ver saldo")
         anim("2 - Depositar")
         anim("3 - Transferir")
@@ -139,6 +140,7 @@ def menu_usuario(usuario):
         anim("5 - Sair")
         
         opcao = input("Escolha: ")
+        print()
         
         if opcao == "1":
             ver_saldo(usuario)
@@ -158,7 +160,7 @@ def menu_usuario(usuario):
 # =========================
 def ver_saldo(usuario):
     dados = carregar()
-    anim(f"Saldo: R${dados[usuario]['saldo']}")
+    anim(f"Saldo: {verde1}R${dados[usuario]['saldo']}{branco}")
 
 def depositar(usuario):
     dados = carregar()
@@ -172,7 +174,7 @@ def depositar(usuario):
     )
     
     salvar(dados)
-    anim("Depósito realizado!")
+    anim(f"{amarelo}Depósito realizado!{branco}")
 
 def transferir(usuario):
     dados = carregar()
@@ -203,7 +205,7 @@ def transferir(usuario):
     )
     
     salvar(dados)
-    anim("Transferência realizada!")
+    anim(f"{amarelo}Transferência realizada!{branco}")
 
 def ver_historico(usuario):
     dados = carregar()
@@ -216,12 +218,13 @@ def ver_historico(usuario):
 # MENU PRINCIPAL
 # =========================
 while True:
-    anim("\n=== BANCO-RUBI ===")
+    anim(f"\n=== {vermelho}BANCO-RUBI{branco} ===")
     anim("1 - Criar conta")
     anim("2 - Login")
     anim("3 - Sair")
     
     opcao = input("Escolha: ")
+    print()
     
     if opcao == "1":
         criar_conta()

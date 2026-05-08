@@ -1,0 +1,20 @@
+{
+    "minions": {
+        "senha": "de8ed4d57c7ed4fa684f0be2355d3b0c0f50b37a9b2ebf8dec0d519b24e5bae6",
+        "salt": "p2wNFs6t",
+        "saldo": 1666.0,
+        "historico": [
+            "2026-05-08 20:25:48.012238 - Dep\u00f3sito de R$666.0",
+            "2026-05-08 20:29:30.018283 - Recebeu R$1000.0 de gru"
+        ]
+    },
+    "gru": {
+        "senha": "0c8edb68efad7ce932db0a8a7f64946fffd433a9d7838d5a8ad6afa803ae25f0",
+        "salt": "aWRwAdew",
+        "saldo": 0.0,
+        "historico": [
+            "2026-05-08 20:29:11.946627 - Dep\u00f3sito de R$1000.0",
+            "2026-05-08 20:29:30.018283 - Transferiu R$1000.0 para minions"
+        ]
+    }
+}
