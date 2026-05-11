@@ -21,8 +21,6 @@ Quais são as 3 funcionalidades PRINCIPAIS e OBRIGATÓRIAS do sistema?
 
 [O usuário deve conseguir criar uma conta]
 
-[se valor muito alto, deverá ter uma confirmação usando a senha]
-
 [O usuário pode ver o extrato]
 
 
@@ -39,8 +37,6 @@ Variáveis: Quais dados o sistema precisa guardar na memória?
 
 ( ) Saldo do Usuário
 
-( ) Idade do Usuário
-
 ( ) Senha do Usuário
 
 ( ) Nome do Usuário
@@ -54,16 +50,12 @@ Condicionais (If/Else): Onde o sistema precisará tomar decisões?
 
 ( ) Se o saque for maior que o saldo, dar erro.
 
-( ) se idade menor que 18, bloquear login
-
-( ) se transferir quantia muito alta (5000), pedir confirmação de senha
-
 
 Loops (While/For): Onde o sistema precisará repetir ações?
 
 ( ) O Menu principal ficará num While True até o usuário escolher Sair.
 
-( ) Apenas entrar se nome, senha e idade do usuário sejam válidos
+( ) Apenas entrar se nome, senha do usuário sejam válidos
 
 ( ) Se colocar a senha errada 3 vezes, a conta será bloqueada!
 
